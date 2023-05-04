@@ -14,3 +14,11 @@ response = requests.get("http://localhost:8000/IsPrime/21")
 assert response.status_code == 200
 assert response.json() == {"is_prime": False}
 
+# Prueba del método "fibonacci"
+response = requests.get("http://localhost:8000/fibonacci/6")
+assert response.status_code == 200
+assert response.json() == {"fibonacci": 8}
+
+response = requests.get("http://localhost:8000/fibonacci/0")
+assert response.status_code == 200
+assert response.json() == {"error": "La posición debe ser un número entero mayor o igual a 1."}
