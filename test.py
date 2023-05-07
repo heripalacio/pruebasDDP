@@ -1,4 +1,6 @@
 import requests
+import main
+
 
 # Prueba del método "hello"
 response = requests.get("http://localhost:8000/hello")
